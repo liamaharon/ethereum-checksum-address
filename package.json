@@ -1,14 +1,16 @@
 {
   "name": "ethereum-checksum-address",
-  "version": "0.0.3",
+  "version": "0.0.7",
   "description": "Convert Ethereum address to a checksummed address",
   "main": "index.js",
   "bin": {
-    "ethereum_checksum_address": "bin/ethereum_checksum_address"
+    "ethereum_checksum_address": "bin/ethereum_checksum_address",
+    "ethereum-checksum-address": "bin/ethereum_checksum_address"
   },
   "scripts": {
     "test": "tape test/*.js",
-    "lint": "standard --fix index.js test/test.js example/example.js"
+    "lint": "standard --fix index.js test/test.js example/example.js",
+    "build:example": "browserify example/main.js -o example/dist/bundle.js"
   },
   "repository": {
     "type": "git",
@@ -28,7 +30,7 @@
     "url": "https://github.com/miguelmota/ethereum-checksum-address/blob/master/LICENSE"
   },
   "dependencies": {
-    "keccak256": "^1.0.0",
+    "keccak": "^3.0.2",
     "meow": "^5.0.0"
   },
   "keywords": [
@@ -41,9 +43,11 @@
     "verification",
     "validation",
     "hashing",
-    "normalize"
+    "normalize",
+    "cli"
   ],
   "devDependencies": {
+    "browserify": "^16.5.1",
     "standard": "^12.0.1",
     "tape": "^4.10.2"
   }

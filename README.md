@@ -5,6 +5,10 @@
 [![License](http://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/miguelmota/ethereum-checksum-address/master/LICENSE)
 [![NPM version](https://badge.fury.io/js/ethereum-checksum-address.svg)](http://badge.fury.io/js/ethereum-checksum-address)
 
+## Demo
+
+[https://lab.miguelmota.com/ethereum-checksum-address](https://lab.miguelmota.com/ethereum-checksum-address)
+
 ## Install
 
 ```bash
@@ -51,6 +55,14 @@ Check if address is a checksummed address
 
 ```bash
 $ ethereum_checksum_address 0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1 --check
+
+true
+```
+
+Piping address example:
+
+```bash
+$ echo 0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1 | ethereum_checksum_address --check
 
 true
 ```
